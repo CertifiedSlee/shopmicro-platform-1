@@ -1,0 +1,31 @@
+name: Extra Credit CI (Templates)
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  quality-and-policy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # 1) Lint / unit tests stage (hook into your capstone scripts)
+      - name: Placeholder - lint/tests
+        run: |
+          echo "Run backend/frontend/ml tests here"
+
+      # 2) IaC checks
+      - name: Placeholder - Terraform fmt/validate
+        run: |
+          echo "terraform fmt -check && terraform validate"
+
+      # 3) Policy checks (Conftest/OPA) - template
+      - name: Placeholder - OPA/Conftest policies
+        run: |
+          echo "conftest test k8s/ --policy policy/"
+
+      # 4) Container image scan (Trivy) - template
+      - name: Placeholder - Trivy scan
+        run: |
+          echo "trivy image shopmicro-backend:local"

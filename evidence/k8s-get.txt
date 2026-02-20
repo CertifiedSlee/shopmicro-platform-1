@@ -1,17 +1,18 @@
-NAME                              READY   STATUS              RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
-pod/backend-84967bcf94-6tp5g      1/1     Running             0          49s   10.244.0.10   minikube   <none>           <none>
-pod/backend-84967bcf94-cl6bn      1/1     Running             0          49s   10.244.0.11   minikube   <none>           <none>
-pod/frontend-85d7f59698-9zkdg     1/1     Running             0          49s   10.244.0.12   minikube   <none>           <none>
-pod/ml-service-76b498db58-2ttn8   1/1     Running             0          49s   10.244.0.14   minikube   <none>           <none>
-pod/postgres-fc44b8679-hk2bl      0/1     ContainerCreating   0          49s   <none>        minikube   <none>           <none>
-pod/redis-6c768c5cfb-8tjnj        0/1     ContainerCreating   0          49s   <none>        minikube   <none>           <none>
+NAME                              READY   STATUS    RESTARTS            AGE    IP            NODE       NOMINATED NODE   READINESS GATES
+pod/backend-84967bcf94-p2m6q      0/1     Running   1 (<invalid> ago)   110m   10.244.0.20   minikube   <none>           <none>
+pod/backend-84967bcf94-tgxr7      1/1     Running   1 (<invalid> ago)   111m   10.244.0.23   minikube   <none>           <none>
+pod/frontend-85d7f59698-9zkdg     1/1     Running   1 (<invalid> ago)   115m   10.244.0.26   minikube   <none>           <none>
+pod/ml-service-76b498db58-2ttn8   1/1     Running   1 (<invalid> ago)   115m   10.244.0.22   minikube   <none>           <none>
+pod/postgres-fc44b8679-hk2bl      1/1     Running   1 (<invalid> ago)   115m   10.244.0.21   minikube   <none>           <none>
+pod/redis-6c768c5cfb-8tjnj        1/1     Running   1 (<invalid> ago)   115m   10.244.0.27   minikube   <none>           <none>
 
-NAME                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE   SELECTOR
-service/backend      ClusterIP   10.108.52.39    <none>        8080/TCP   50s   app=backend
-service/frontend     ClusterIP   10.99.59.156    <none>        3000/TCP   50s   app=frontend
-service/ml-service   ClusterIP   10.99.44.221    <none>        5000/TCP   50s   app=ml-service
-service/postgres     ClusterIP   10.98.61.185    <none>        5432/TCP   50s   app=postgres
-service/redis        ClusterIP   10.108.38.209   <none>        6379/TCP   50s   app=redis
+NAME                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE    SELECTOR
+service/backend      ClusterIP   10.108.52.39    <none>        8080/TCP   115m   app=backend
+service/frontend     ClusterIP   10.99.59.156    <none>        3000/TCP   115m   app=frontend
+service/ml-service   ClusterIP   10.99.44.221    <none>        5000/TCP   115m   app=ml-service
+service/postgres     ClusterIP   10.98.61.185    <none>        5432/TCP   115m   app=postgres
+service/redis        ClusterIP   10.108.38.209   <none>        6379/TCP   115m   app=redis
 
-NAME                                  CLASS   HOSTS             ADDRESS        PORTS   AGE
-ingress.networking.k8s.io/shopmicro   nginx   shopmicro.local   192.168.49.2   80      49s
+NAME                                       CLASS   HOSTS             ADDRESS   PORTS   AGE
+ingress.networking.k8s.io/backend-canary   nginx   shopmicro.local             80      3s
+ingress.networking.k8s.io/shopmicro        nginx   shopmicro.local             80      115m

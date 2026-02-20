@@ -1,0 +1,17 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: NetworkChaos
+metadata:
+  name: ml-latency
+  namespace: shopmicro
+spec:
+  action: delay
+  mode: one
+  delay:
+    latency: "500ms"
+    correlation: "0"
+    jitter: "50ms"
+  selector:
+    namespaces:
+      - shopmicro
+    labelSelectors:
+      app: ml-service
