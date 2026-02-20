@@ -1,0 +1,6 @@
+NAME                                IMAGE                             COMMAND                  SERVICE      CREATED          STATUS          PORTS
+shopmicro-platform-1-backend-1      shopmicro-platform-1-backend      "docker-entrypoint.s…"   backend      34 minutes ago   Up 34 minutes   0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+shopmicro-platform-1-frontend-1     shopmicro-platform-1-frontend     "docker-entrypoint.s…"   frontend     34 minutes ago   Up 34 minutes   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp
+shopmicro-platform-1-ml-service-1   shopmicro-platform-1-ml-service   "python app.py"          ml-service   13 minutes ago   Up 13 minutes   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp
+shopmicro-platform-1-postgres-1     postgres:16                       "docker-entrypoint.s…"   postgres     34 minutes ago   Up 34 minutes   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+shopmicro-platform-1-redis-1        redis:7-alpine                    "docker-entrypoint.s…"   redis        34 minutes ago   Up 34 minutes   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp

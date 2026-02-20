@@ -1,0 +1,10 @@
+ml-service-1  |  * Serving Flask app 'app'
+ml-service-1  |  * Debug mode: off
+ml-service-1  | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ml-service-1  |  * Running on all addresses (0.0.0.0)
+ml-service-1  |  * Running on http://127.0.0.1:5000
+ml-service-1  |  * Running on http://172.20.0.6:5000
+ml-service-1  | [33mPress CTRL+C to quit[0m
+ml-service-1  | 172.20.0.1 - - [20/Feb/2026 11:02:58] "GET /recommendations/42 HTTP/1.1" 200 -
+ml-service-1  | 172.20.0.1 - - [20/Feb/2026 11:02:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ml-service-1  | 172.20.0.1 - - [20/Feb/2026 11:03:01] "GET /health HTTP/1.1" 200 -

@@ -1,0 +1,5 @@
+backend-1  | 
+backend-1  | > shopmicro-backend@1.0.0 start
+backend-1  | > node server.js
+backend-1  | 
+backend-1  | backend listening on 8080

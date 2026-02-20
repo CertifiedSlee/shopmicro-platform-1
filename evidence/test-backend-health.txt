@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 35
+ETag: W/"23-cKim6QfTeqdvPdvD2D6ENpNGi7I"
+Date: Fri, 20 Feb 2026 11:25:06 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"status":"ok","service":"backend"}

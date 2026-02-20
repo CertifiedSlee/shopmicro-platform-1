@@ -1,0 +1,14 @@
+resources:
+  - ../../base
+
+# For local clusters (minikube/kind) where we build images locally.
+images:
+  - name: shopmicro-backend
+    newName: shopmicro-backend
+    newTag: local-v2
+  - name: shopmicro-ml
+    newName: shopmicro-ml
+    newTag: local
+  - name: shopmicro-frontend
+    newName: shopmicro-frontend
+    newTag: local

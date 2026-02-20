@@ -1,0 +1,5 @@
+- name: Ensure curl is installed (example)
+  become: false
+  shell: |
+    command -v curl >/dev/null 2>&1 || echo "curl missing (install manually for Windows)"
+  changed_when: false

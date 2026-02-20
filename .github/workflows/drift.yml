@@ -1,0 +1,17 @@
+name: terraform-drift
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1" # weekly
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+      - run: |
+          cd infrastructure/terraform/envs/dev
+          terraform init -backend=false
+          terraform plan -no-color || true

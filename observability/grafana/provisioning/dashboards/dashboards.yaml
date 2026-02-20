@@ -1,0 +1,10 @@
+apiVersion: 1
+providers:
+  - name: 'shopmicro'
+    orgId: 1
+    folder: 'ShopMicro'
+    type: file
+    disableDeletion: false
+    editable: true
+    options:
+      path: /var/lib/grafana/dashboards
